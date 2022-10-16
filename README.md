@@ -2,7 +2,7 @@
 
 Very Simple Todo App Using State Management Pure Flutter
 
-### 🎁 **Fiture**
+### 🎁 **Feature**
 - App Name
 - Responsive
 - Support System.mode (Dark & Light) 
