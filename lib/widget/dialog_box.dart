@@ -9,18 +9,20 @@ class DialogBox extends StatelessWidget {
     required this.controller,
     required this.onSave,
     required this.onCancel,
+    this.index,
   });
 
   final controller;
   final onCancel;
   final onSave;
+  final index;
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
       content: FittedBox(
         child: SizedBox(
-          width: MediaQuery.of(context).size.width / 2,
+          width: MediaQuery.of(context).size.width / 1.5,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -30,7 +32,7 @@ class DialogBox extends StatelessWidget {
                 child: TextFormField(
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please enter some text';
+                      return 'Veuillez entrer votre idée de cadeau';
                     }
                     return null;
                   },
@@ -41,7 +43,7 @@ class DialogBox extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                   ),
                   decoration: InputDecoration(
-                    labelText: 'Task',
+                    labelText: 'Idée',
                     labelStyle: GoogleFonts.poppins(
                       letterSpacing: 1,
                       fontWeight: FontWeight.w400,
@@ -55,7 +57,7 @@ class DialogBox extends StatelessWidget {
                       letterSpacing: 1,
                       fontWeight: FontWeight.w400,
                     ),
-                    helperText: "What's your task?",
+                    helperText: "Quelle est votre idée ?",
                   ),
                   onChanged: (value) {},
                 ),
@@ -69,18 +71,23 @@ class DialogBox extends StatelessWidget {
                   MaterialButton(
                     onPressed: onSave,
                     child: Text(
-                      'Save',
+                      'Enregistrer',
                       style: GoogleFonts.poppins(
                         letterSpacing: 1,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
                   ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
                   const SizedBox(width: 12),
                   MaterialButton(
                     onPressed: onCancel,
                     child: Text(
-                      'Cancel',
+                      'Annuler',
                       style: GoogleFonts.poppins(
                         letterSpacing: 1,
                         fontWeight: FontWeight.w400,

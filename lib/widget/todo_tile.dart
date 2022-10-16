@@ -10,6 +10,7 @@ class ToDoTile extends StatelessWidget {
   final bool taskCompleted;
   Function(bool?)? onChanged;
   Function(BuildContext)? deleteFunction;
+  Function(BuildContext)? editFunction;
 
   ToDoTile({
     super.key,
@@ -18,6 +19,7 @@ class ToDoTile extends StatelessWidget {
     required this.taskCompleted,
     required this.onChanged,
     required this.deleteFunction,
+    required this.editFunction,
   });
 
   @override
@@ -33,7 +35,13 @@ class ToDoTile extends StatelessWidget {
               icon: Icons.delete,
               backgroundColor: Colors.red.shade300,
               borderRadius: BorderRadius.circular(12),
-            )
+            ),
+            SlidableAction(
+              onPressed: editFunction,
+              icon: Icons.edit,
+              backgroundColor: Colors.blue.shade300,
+              borderRadius: BorderRadius.circular(12),
+            ),
           ],
         ),
         child: Slidable(
@@ -45,7 +53,13 @@ class ToDoTile extends StatelessWidget {
                 icon: Icons.delete,
                 backgroundColor: Colors.red.shade300,
                 borderRadius: BorderRadius.circular(12),
-              )
+              ),
+              SlidableAction(
+                onPressed: editFunction,
+                icon: Icons.edit,
+                backgroundColor: Colors.blue.shade300,
+                borderRadius: BorderRadius.circular(12),
+              ),
             ],
           ),
           child: CheckboxListTile(

@@ -16,11 +16,7 @@ class _HomePageState extends State<HomePage> {
   final controller = TextEditingController();
 
   //Auto Generated
-  List toDoList = [
-    ["Make Tutorial", false],
-    ["Do Exercise", false],
-    ["Buying Some Stuff", true],
-  ];
+  List toDoList = [];
 
   //Function
   void checkBoxChanged(bool? value, int index) {
@@ -32,6 +28,14 @@ class _HomePageState extends State<HomePage> {
   void saveNewTask() {
     setState(() {
       toDoList.add([controller.text, false]);
+      controller.clear();
+    });
+    Navigator.of(context).pop();
+  }
+
+  void saveEditedTask(int index) {
+    setState(() {
+      toDoList[index][0] = controller.text;
       controller.clear();
     });
     Navigator.of(context).pop();
@@ -50,6 +54,21 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  void editTask(int index) {
+    controller.text = toDoList[index][0];
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return DialogBox(
+          controller: controller,
+          onSave: () => saveEditedTask(index),
+          onCancel: () => Navigator.of(context).pop(),
+          index: index,
+        );
+      },
+    );
+  }
+
   void deleteTask(int index) {
     setState(() {
       toDoList.removeAt(index);
@@ -61,7 +80,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "TodoList",
+          "PartaListe",
           style: GoogleFonts.poppins(
             letterSpacing: 1,
             fontWeight: FontWeight.w400,
@@ -87,6 +106,7 @@ class _HomePageState extends State<HomePage> {
               taskCompleted: toDoList[index][1],
               onChanged: (value) => checkBoxChanged(value, index),
               deleteFunction: (context) => deleteTask(index),
+              editFunction: (context) => editTask(index),
             );
           },
         ),
