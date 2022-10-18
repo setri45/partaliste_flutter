@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "107325947565",
+    "firebase_url": "https://partaliste-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "partaliste",
     "storage_bucket": "partaliste.appspot.com"
   },

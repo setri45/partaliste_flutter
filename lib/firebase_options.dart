@@ -52,6 +52,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '107325947565',
     projectId: 'partaliste',
     authDomain: 'partaliste.firebaseapp.com',
+    databaseURL: 'https://partaliste-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'partaliste.appspot.com',
     measurementId: 'G-FZ8WPJRCRY',
   );
@@ -61,6 +62,7 @@ class DefaultFirebaseOptions {
     appId: '1:107325947565:android:925831e46af4b4c8521024',
     messagingSenderId: '107325947565',
     projectId: 'partaliste',
+    databaseURL: 'https://partaliste-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'partaliste.appspot.com',
   );
 
@@ -69,6 +71,7 @@ class DefaultFirebaseOptions {
     appId: '1:107325947565:ios:d2dd19f102846402521024',
     messagingSenderId: '107325947565',
     projectId: 'partaliste',
+    databaseURL: 'https://partaliste-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'partaliste.appspot.com',
     iosClientId: '107325947565-pf43v7l7jbnbfra0hnta4u3pnid8n898.apps.googleusercontent.com',
     iosBundleId: 'com.neved.partalisteapp',
