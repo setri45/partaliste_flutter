@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "107325947565",
+    "project_id": "partaliste",
+    "storage_bucket": "partaliste.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107325947565:android:925831e46af4b4c8521024",
+        "android_client_info": {
+          "package_name": "com.neved.partalisteapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107325947565-b6hhfn6uub4nt46ferpk20ekdb1bidre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmzDRmDdRGs9D1reZbnk5FEkSgomhOm_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107325947565-b6hhfn6uub4nt46ferpk20ekdb1bidre.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "107325947565-jcqfcaa3efp3740fvpvce2jssmgmd8ib.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.todoApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

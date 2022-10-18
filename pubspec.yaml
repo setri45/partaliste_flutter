@@ -1,4 +1,4 @@
-name: todo_app
+name: partalisteapp
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -34,6 +34,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_slidable: ^1.2.0
   google_fonts: ^3.0.1
+  firebase_core: ^1.24.0
+  firebase_auth: ^3.11.2
 
 dev_dependencies:
   flutter_test:
